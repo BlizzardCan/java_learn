@@ -1,12 +1,25 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
+// Polymorphic
 public class Hello {
     public static void main(String[] args) {
-        for(String nc:args){
-            if("-version".equals(nc)){
-                System.out.println("Hello World");
-            }
-        }
+
     }
+}
+
+
+interface Person {
+    void run();
+    String getName();
+}
+
+class Student implements Person {
+    private String name;
+    @Override
+    public void run (){
+        System.out.println(name);
+    }
+    @Override
+    public String getName(){
+        return name;
+    }
+
 }
